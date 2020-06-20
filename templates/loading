@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Loading...</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./static/styles.css">
+<script src="./static/jquery-3.5.1.min.js"></script>
+<script>
+
+    window.location.replace('/data_page');
+    // $.ajax({
+    //     type: 'POST',
+    //     url: '/data_page',
+    //     data: {
+    //         form_data: '{{ form_data|tojson }}',
+    //     },
+    //     success: function() {
+    //         window.location.replace('/data_page');
+    //     }
+    //   });
+
+    // // Example POST method implementation:
+    // async function postData(url = '', data = {}) {
+    //   // Default options are marked with *
+    //   const response = await fetch(url, {
+    //     method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    //     mode: 'cors', // no-cors, *cors, same-origin
+    //     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    //     credentials: 'same-origin', // include, *same-origin, omit
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //       // 'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     redirect: 'follow', // manual, *follow, error
+    //     referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    //     body: JSON.stringify(data) // body data type must match "Content-Type" header
+    //   });
+    //   return response.json(); // parses JSON response into native JavaScript objects
+    // }
+
+    // postData('/data_page', { answer: 42 })
+    //   .then(data => {
+    //     console.log(data); // JSON data parsed by `response.json()` call
+    //   });
+
+</script>
+</head>
+<body>
+    <div class="lds-hourglass" id="lds-hourglass" style="padding: 25% 20% 20% 40%;">
+    </div>
+</body>
+</html>

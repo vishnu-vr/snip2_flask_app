@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Loading...</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./static/styles.css">
+<script>
+    // $.ajax({
+    //     type: 'POST',
+    //     url: '/data_page',
+    //     data: {
+    //         form_data: '{{form_data|tojson }}',
+    //     },
+    //     success: function() {
+    //         window.location.replace('/data_page');
+    //     }
+    //   });
+    let data = {{form_data|tojson }};
+
+    fetch("/data_page", {
+      method: "POST", 
+      body: data//JSON.stringify(data)
+    }).then(res => {
+      console.log("Request complete! response:", res);
+    });
+</script>
+</head>
+<body>
+    <div class="lds-hourglass" id="lds-hourglass" style="padding: 25% 20% 20% 40%;">
+    </div>
+</body>
+</html>

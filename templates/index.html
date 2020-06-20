@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./static/styles.css">
+<script src="./static/button.js"></script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/*button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}*/
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  margin:10px;
+  margin-right: 30%;
+  margin-left: 30%;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 600px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;  
+  }
+  .container {
+  padding: 16px;
+  margin:10px;
+  margin-right: 0em;
+  margin-left: 0em;
+}
+}
+
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+</style>
+<script>
+function loading(){
+  console.log("in the loading function!");
+  // showing the loading spinner
+  document.getElementById("loader").style.display = "";
+  // document.getElementById("myDiv").style.display = "block";
+  // hiding the rest of the body
+  const body = document.getElementById("body");
+  body.setAttribute("class","hideme");
+}
+</script>
+</head>
+<body>
+<!-- <div class="hideme" id="lds-hourglass" style="padding: 25% 20% 20% 40%;">
+</div> -->
+
+<div id="loader" style="display: none;"></div>
+<!-- <div style="display:none;" id="myDiv" class="animate-bottom">
+
+</div> -->
+
+<div id="body">
+  <h2 align="center" style="font-family: monospace;"><b>SNIP 2.0</b></h2>
+
+  <form action="/login" method="post" onsubmit="loading()">
+
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+          
+      <button type="submit">Login</button>
+
+    </div>
+
+  <!--   <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+    </div> -->
+  </form>
+  <div class="container">
+    <hr>
+    <h4><p>Example username : SCS/1234/16</p>
+      <p>Example password : 1234</p>
+    </h4>
+  </div>
+</div>
+
+<div class="footer">
+  <!-- Use a button to open the snackbar -->
+  <button style="background-color:grey;" onclick="myFunction()">&#128519;</button>
+
+  <!-- The actual snackbar -->
+  <div id="snackbar">https://github.com/vishnu-vr/snip2_flask_app</div>
+</div>
+
+</body>
+</html>
