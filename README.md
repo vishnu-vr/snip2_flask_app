@@ -2,8 +2,7 @@
 THIS IS THE FLASK VERSION
 
 Attendance monitoring app.<br><br>
-apk for android users : https://drive.google.com/open?id=1qc_1ZFnWaVRq2ozVrbI6WAMdkB4AZazl  <br>
-URL : https://snip2.herokuapp.com
+apk for android users : https://drive.google.com/open?id=1qc_1ZFnWaVRq2ozVrbI6WAMdkB4AZazl  
 
 ## Description
 Gathers attendance related data from https://sset.ecoleaide.com/home.htm through an api which scrapes required data, when provided with username and password.
