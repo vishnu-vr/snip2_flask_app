@@ -27,7 +27,7 @@ jsonify==0.5
 kombu==4.6.10
 MarkupSafe==1.1.1
 mechanize==0.4.5
-numpy==1.18.5
+numpy==1.22.0
 parso==0.7.0
 pexpect==4.8.0
 pickleshare==0.7.5
