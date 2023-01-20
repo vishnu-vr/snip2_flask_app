@@ -26,7 +26,7 @@ Jinja2==2.11.2
 jsonify==0.5
 kombu==4.6.10
 MarkupSafe==1.1.1
-mechanize==0.4.5
+mechanize==0.4.6
 numpy==1.18.5
 parso==0.7.0
 pexpect==4.8.0
